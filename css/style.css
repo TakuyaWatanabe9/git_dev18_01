@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+
+body{
+    color: #222222;
+    font-size: 16px
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.text-center{
+    text-align: center;
+}
+.site-title{
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.sub-title{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+}
+/* hero-image */
+.hero-image__text{
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+.hero-image__text2{
+    position: absolute;
+    top: 246px;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+.hero-image{
+    position: relative;
+}
+/* header */
+a {
+    text-decoration: none;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 121px;
+}
+.nav-list{
+    display: flex;
+}
+.nav-item{
+    margin: 50px 0 50px 50px;
+    font-size: 21px;
+    text-decoration: none;
+}
+.nav-item>a{
+    color: #222222;
+    text-transform: uppercase;
+    font: bold;
+}
+/* about */
+.profile{
+    padding: 60px 0 60px;
+}
+.profile-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 2;
+}
+.profile__title{
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd61a;
+}
+.profile__name{
+    margin: 0 0 60px;
+    font-size: 18px;
+}
+.profile__text{
+    margin: 0 0 40px;
+}
+.profile___text{
+    margin: 0 0 80px;
+}
+.list__text{
+    width: 25%;
+}
+
+/* course */
+.course_title{
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+.course_text{
+    margin: 0 0 60px;
+}
+.course2{
+    background-color: #fafafa;
+    margin:0 auto; 
+    width: 1200px;
+}
+.course-box{
+    display: flex;
+    line-height: 0;
+}
+.course-img{
+    width: 600px;
+}
+.course-text{
+    width: 550px;
+    margin: 120px 0 0px 50px;
+    line-height: 2;
+}
+.course-text2{
+    width: 550px;
+    margin: 120px 50px 0px 0px;
+    line-height: 2;
+}
+.japanese-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 40px;
+}
+.course-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    line-height: 0;
+}
+/* news */
+.news__list{
+    display: flex;
+}
+.news__item{
+    width: 33.333%;
+}
+.news__eyecatch{
+    margin: 0 30px 30px 30px ;
+}
+.news__day{
+    margin: 0 30px 30px 24px;
+}
+.btn{
+    display: block;
+    background-color: #ffd61a;
+    color: #ffffff;
+    font-size: 18px;
+    width: 300px;
+    margin: auto;
+    padding: 21px 0;
+    text-align: center;
+}
+.news_title{
+    margin: 0 0 60px;
+}
+
+
+/* access */
+.access{
+    padding: 60px 0 30px 0;
+    background-color: #fafafa;
+}
+.access_title{
+    margin: 30px 0 60px;
+}
+.access_text{
+    display: flex;
+    justify-content: center;
+    margin: 60px 0 0 0;
+}
+.access-flex{
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    margin: 0 auto;
+}
+.access-form{
+    width: 200px;
+    margin: 0 0 30px;
+}
+.access-item{
+    width: 350px;
+}
+    
+/* contact */
+.contact-title{
+    margin: 0 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+.contact__text{
+    margin: 60px 0 0;
+}
+.contact_text{
+    margin: 0 0 30px;
+}
+.contact-text{
+    margin: 0 0 70px;
+}
+.contact{
+    padding: 60px 0 140px 0;
+}
+.form-wrapper{
+    width: 640px;
+    margin: auto;
+} 
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 30px;
+}
+.form-title{
+    width: 160px;
+    margin: 0 64px 0 16px;
+} 
+.form-item{
+    width: 400px;
+    margin: 0 0 16px;   
+}
+.label{
+    display: flex;
+    flex-flow: column;
+}
+.form-parts{
+    font-size: 16px;
+    border: solid 1px #bfbfbf;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type*="checkbox"]{
+    margin: 0 0 24px;
+}
+.btn-submit{
+    border: none;
+}
+/* footer */
+.footer{
+    padding: 30px 0;
+    background-color: #707070;
+}
+.copyrights{
+    color: #ffffff;
+}
