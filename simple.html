@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <title>Chatアプリ</title>
+  <style>
+    /* この中にcssをかけます */
+  </style>
 </head>
 
 <body>
@@ -30,75 +33,74 @@
     <!-- 保存されたデータが表示される箇所 -->
     <div id="output"></div>
   </div>　　　　
-  <!-- ブラウザの画面に見える内容 -->
 
+  <!--/ ブラウザの画面に見える内容 -->
 
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- JQuery -->
 
   <!--** 以下Firebase **-->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <!-- firebaseのverが変わるので、数字がどんどん変化します🙋‍♀️ -->
   <!-- ここにfirebaseのscriptを貼り付ける -->
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
 
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
-      apiKey: "",
-      authDomain: "",
-      databaseURL: "",
-      projectId: "",
-      storageBucket: "",
-      messagingSenderId: "",
-      appId: ""
-    };
+    apiKey: "AIzaSyCHXCrzCNuHfkaHLS-xWOfsJJhPQHmdlxc",
+    authDomain: "dev-chat01.firebaseapp.com",
+    databaseURL: "https://dev-chat01.firebaseio.com",
+    projectId: "dev-chat01",
+    storageBucket: "dev-chat01.appspot.com",
+    messagingSenderId: "1042478284750",
+    appId: "1:1042478284750:web:e9676c66185c025695759f"
+  };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-    //firebaseのデーターベース（保存させる場所）を使いますよ
+    //firebaseのデーターベース（保存させる場所）を使いますよと言うjsのコードを貼り付ける
+    // xxxxxスクリプトを貼り付ける
     const newPostRef = firebase.database().ref();
 
     // ここから下にjqueryの処理を書いて練習します
-
     // 送信ボタンをクリックされたら次の処理をする
     $("#send").on("click", function () {
       // データを登録で送る
       newPostRef.push({
-        username: $("#username").val(), //名前
-        text: $("#text").val(), //テキストエリア
+        username: $("#username").val(),//名前
+        text: $("#text").val(),//テキストエリア
       })
+      // 文字を空にする
       $("#text").val(""); //空にする
       $("#username").val(""); //空にする
     });
 
     // 受信処理
     newPostRef.on("child_added", function (data) {
-      let v = data.val(); //ここに保存されたデータが全て入ってくる
+      //ここに保存されたデータが全て入ってくる
+      // function (data)のdataにfirebaseのデータが入ってくる
+      let v = data.val();
       // let k = data.key; //今回は使いません
 
-      console.log(v); //vの変数に入っているオブジェクトを全てみる
-
+      //console.logで受信=firebaseに登録されている中身を確認しよう！
+      console.log(v);
+      //テンプレートリテラル `` を活用して変数にhtmlを埋め込もう！ 
       let str = `<p>${v.username}<br>${v.text}</p>`;
 
-      // ここでデータをhtmlに埋め込む
+      // ここでデータをhtmlに埋め込む prependには変数を埋め込もう！
       $("#output").prepend(str);
-    })
+    });
 
     $("#text").on("keydown", function (e) {
-      console.log(e, "event");
+      console.log(e, "event")
 
-      if (keyCode ===13) {
+      if (e.keyCode === 13) {
         newPostRef.push({
-          username: $("#username").val(), //名前
-          text: $("#text").val(), //テキストエリア
+          username: $("#username").val(),
+          test: $("#text").val,
         })
-        $("#text").val(""); //空にする
-        $("#username").val(""); //空にする
+        $("#text").val("")
+        $("#username").val("")
       }
     })
   </script>
